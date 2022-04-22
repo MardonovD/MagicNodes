@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import Header from "./Header.js";
 import Search from "./Search.js";
 import Card from "./Card.js";
-
+// console.log(Card);
 // const Index = () => {
 //   return (
 //     <div className="big__container">
@@ -31,7 +31,10 @@ import Card from "./Card.js";
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      textareaValue: "",
+    };
+    // this.setState({ textareaValue: document.querySelector(".") });
   }
 
   render() {
@@ -40,11 +43,6 @@ class Index extends React.Component {
         <Header />
         <Search />
         <div className="card-flex">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
           <Card />
           <Card />
           <Card />
@@ -58,3 +56,48 @@ class Index extends React.Component {
 export default Index;
 
 ReactDOM.render(<Index />, document.querySelector("#root"));
+
+// class Editor extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       textareaValue: "",
+//     };
+//   }
+
+//    handleOnChange(event) {
+//     this.setState({
+//       textareaValue: .targeventet.value,
+//     });
+//     console.log(this.state.textareaValue.length)
+//    }
+
+//   handleOnSubmit(event) {
+//     event.preventDefault();
+//     console.log(this.state.textareaValue);
+//     this.setState({
+//       textareaValue:
+//         this.state.textareaValue +
+//         " [Saved on " +
+//         new Date().toLocaleString() +
+//         "]",
+//     });
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <form onSubmit={(event) => this.handleOnSubmit(event)}>
+//           <textarea
+//             rows={10}
+//             cols={30}
+//             value={this.state.textareaValue}
+//             onChange={(event) => this.handleOnChange(event)}
+//           ></textarea>
+//           <br />
+//           <input type="submit" value="Save" />
+//         </form>
+//       </div>
+//     );
+//   }
+// }
+// ReactDOM.render(<Editor />, document.getElementById("root"));
