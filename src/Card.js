@@ -16,12 +16,11 @@ class Card extends React.Component {
 
   saqlash(event) {
     let data = new Date().toLocaleDateString();
-    console.log(data);
 
     // event.preventDefault();
     // this.hiddenInp.classList.toggle("hidden");
     let miqdor = document.querySelector(".miqdor");
-
+    miqdor.textContent = data;
     let hiddenInp = document.querySelector("#input-Card");
     hiddenInp.classList.add("hidden");
   }
@@ -37,6 +36,7 @@ class Card extends React.Component {
           id="input-Card"
           onChange={(event) => this.uzgartirish(event)}
         ></textarea>
+        
         <div className="xaracteristic">
           <p className="miqdor">
             {this.state.miqdor - this.state.textareaValue.length} Simvol
