@@ -12,10 +12,19 @@ class Card extends React.Component {
 
   uzgartirish(event) {
     this.setState({ textareaValue: event.target.value });
-    console.log(event.target.value.length);
   }
 
-  raqami() {}
+  saqlash(event) {
+    let data = new Date().toLocaleDateString();
+    console.log(data);
+
+    // event.preventDefault();
+    // this.hiddenInp.classList.toggle("hidden");
+    let miqdor = document.querySelector(".miqdor");
+
+    let hiddenInp = document.querySelector("#input-Card");
+    hiddenInp.classList.add("hidden");
+  }
 
   render() {
     return (
@@ -32,7 +41,9 @@ class Card extends React.Component {
           <p className="miqdor">
             {this.state.miqdor - this.state.textareaValue.length} Simvol
           </p>
-          <button className="btn-Save">Save</button>
+          <button className="btn-Save" onClick={(event) => this.saqlash(event)}>
+            Save
+          </button>
         </div>
       </div>
     );

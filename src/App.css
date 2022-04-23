@@ -1,8 +1,19 @@
-body {
-  font-family: sans-serif;
-  background-color: rgba(95, 158, 160, 0.237);
+:root {
+  --background-color1: rgba(95, 158, 160, 0.237);
+  --background-color2: rgba(0, 0, 0, 0.517);
 }
 
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color1);
+}
+.black {
+  background-color: var(--background-color2);
+}
+
+.hidden {
+  display: none;
+}
 .btn {
   width: auto;
   height: 35px;

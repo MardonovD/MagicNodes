@@ -42,10 +42,8 @@ class Index extends React.Component {
       <div className="big__container">
         <Header />
         <Search />
+
         <div className="card-flex">
-          <Card />
-          <Card />
-          <Card />
           <Card />
         </div>
       </div>
