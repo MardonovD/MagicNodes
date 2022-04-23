@@ -12,17 +12,24 @@ class Card extends React.Component {
 
   uzgartirish(event) {
     this.setState({ textareaValue: event.target.value });
+    console.log(this.state);
   }
 
   saqlash(event) {
     let data = new Date().toLocaleDateString();
+    let saveCardDiv = document.querySelector(".saveCardDiv");
 
-    // event.preventDefault();
-    // this.hiddenInp.classList.toggle("hidden");
     let miqdor = document.querySelector(".miqdor");
     miqdor.textContent = data;
+
+    saveCardDiv.classList.remove("hidden");
+
+    saveCardDiv.textContent = this.state.textareaValue;
     let hiddenInp = document.querySelector("#input-Card");
     hiddenInp.classList.add("hidden");
+
+
+    
   }
 
   render() {
@@ -36,7 +43,7 @@ class Card extends React.Component {
           id="input-Card"
           onChange={(event) => this.uzgartirish(event)}
         ></textarea>
-        
+        <div className="saveCardDiv hidden"></div>
         <div className="xaracteristic">
           <p className="miqdor">
             {this.state.miqdor - this.state.textareaValue.length} Simvol

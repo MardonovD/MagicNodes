@@ -14,6 +14,7 @@ body {
 .hidden {
   display: none;
 }
+
 .btn {
   width: auto;
   height: 35px;
@@ -76,6 +77,18 @@ body {
   margin-top: 10px;
   border-radius: 5px;
   color: white;
+  font-size: 20px;
+}
+
+.saveCardDiv {
+  border: none;
+  height: 80vh;
+  width: 90%;
+
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 128, 0, 0.758);
   font-size: 20px;
 }
 
