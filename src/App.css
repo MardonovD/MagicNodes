@@ -83,7 +83,7 @@ body {
 .saveCardDiv {
   border: none;
   height: 80vh;
-  width: 90%;
+  width: 300px;
 
   margin-top: 10px;
   border-radius: 5px;
@@ -110,6 +110,15 @@ body {
   height: 30px;
   border-radius: 15px;
   border: 4px solid green;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#remove {
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+
   font-size: 20px;
   font-weight: 600;
 }
